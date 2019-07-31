@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "chinleung/php-weekday": "dev-master",
         "php": "^7.1",
+        "chinleung/php-weekday": "^1.0",
         "illuminate/support": "5.8.*"
     },
     "require-dev": {
