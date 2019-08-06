@@ -3,7 +3,9 @@
     "description": "A wrapper for chinleung/php-weekday.",
     "keywords": [
         "chinleung",
-        "laravel-weekday"
+        "laravel-weekday",
+        "weekdays",
+        "localization"
     ],
     "homepage": "https://github.com/chinleung/laravel-weekday",
     "license": "MIT",
@@ -48,7 +50,7 @@
                 "ChinLeung\\LaravelWeekday\\LaravelWeekdayServiceProvider"
             ],
             "aliases": {
-                "LaravelWeekday": "ChinLeung\\LaravelWeekday\\LaravelWeekdayFacade"
+                "Weekday": "ChinLeung\\LaravelWeekday\\LaravelWeekdayFacade"
             }
         }
     }

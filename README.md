@@ -20,44 +20,44 @@ composer require chinleung/laravel-weekday
 ### Retrieve a name from a value
 
 ``` php
-LaravelWeekday::name(0); // Sunday
+Weekday::name(0); // Sunday
 ```
 
 ### Retrieving a name from a value for a different locale
 
 ``` php
-LaravelWeekday::name(1, 'fr'); // Lundi
+Weekday::name(1, 'fr'); // Lundi
 ```
 
 ### Retrieving a value from a name
 
 ``` php
-LaravelWeekday::value('Sunday'); // 0
+Weekday::value('Sunday'); // 0
 ```
 
 ### Retrieving a value from a name for a different locale
 
 ``` php
-LaravelWeekday::value('Dimanche', 'fr'); // 0
+Weekday::value('Dimanche', 'fr'); // 0
 ```
 
 ### Retrieving all names for a locale
 
 ``` php
-LaravelWeekday::names('en');
+Weekday::names('en');
 ```
 
 ### Changing the locale of an instance
 
 ``` php
-LaravelWeekday::name(0)->to('fr')->getName(); // Dimanche
+Weekday::name(0)->to('fr')->getName(); // Dimanche
 ```
 
 ### Retrieving the PhpWeek instance:
 
 ``` php
 // Object of \ChinLeung\PhpWeek\PhpWeek with Sunday and set to locale of the application.
-LaravelWeekday::parse('Sunday')->getInstance();
+Weekday::parse('Sunday')->getInstance();
 ```
 
 ### Testing
