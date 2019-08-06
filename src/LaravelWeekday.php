@@ -18,13 +18,10 @@ class LaravelWeekday
      * Constructor of the class.
      *
      * @param  \ChinLeung\PhpWeekday\PhpWeekday  $instance
-     * @return self
      */
     public function __construct(PhpWeekday $instance = null)
     {
         $this->instance = $instance;
-
-        return $this;
     }
 
     /**
