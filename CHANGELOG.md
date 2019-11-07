@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-weekday` will be documented in this file
 
+## [v1.0.2 - 2019-11-07](https://github.com/chinleung/laravel-weekday/compare/v1.0.1...v1.0.2)
+
+- Added support for Laravel 6
+
 ## [v1.0.1 - 2019-08-06](https://github.com/chinleung/laravel-weekday/compare/v1.0.0...v1.0.1)
 
 - Updated default facade alias from `LaravelWeekday` to `Weekday` 
