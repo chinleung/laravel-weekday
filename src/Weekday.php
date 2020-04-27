@@ -2,22 +2,22 @@
 
 namespace ChinLeung\LaravelWeekday;
 
-use ChinLeung\PhpWeekday\PhpWeekday;
+use ChinLeung\Weekday\Weekday as PhpWeekday;
 use Illuminate\Support\Collection;
 
-class LaravelWeekday
+class Weekday
 {
     /**
      * The weekday instance.
      *
-     * @var \ChinLeung\PhpWeekday\PhpWeekday
+     * @var \ChinLeung\Weekday\Weekday
      */
     protected $instance;
 
     /**
      * Constructor of the class.
      *
-     * @param  \ChinLeung\PhpWeekday\PhpWeekday  $instance
+     * @param  \ChinLeung\Weekday\Weekday  $instance
      */
     public function __construct(PhpWeekday $instance = null)
     {
@@ -25,7 +25,7 @@ class LaravelWeekday
     }
 
     /**
-     * Forward the call to the PhpWeekday instance.
+     * Forward the call to the Weekday instance.
      *
      * @param  string  $method
      * @param  array  $arguments
@@ -37,13 +37,13 @@ class LaravelWeekday
     }
 
     /**
-     * Retrieve the PhpWeekday instance.
+     * Retrieve the Weekday instance.
      *
-     * @return  \ChinLeung\PhpWeekday\PhpWeekday
+     * @return  \ChinLeung\Weekday\Weekday
      */
     public function getInstance() : PhpWeekday
     {
-        return $this->instance;
+        return $this->instance ?? new PhpWeekday;
     }
 
     /**

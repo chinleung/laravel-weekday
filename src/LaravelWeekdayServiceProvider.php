@@ -26,7 +26,7 @@ class LaravelWeekdayServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('laravel-weekday', function () {
-            return new LaravelWeekday;
+            return new Weekday;
         });
     }
 }
