@@ -10,7 +10,7 @@ use Weekday;
 class WrapperTest extends TestCase
 {
     /** @test **/
-    public function can_parse_a_name() : void
+    public function can_parse_a_name(): void
     {
         $instance = Weekday::parse('Monday');
 
@@ -26,7 +26,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function can_parse_a_value() : void
+    public function can_parse_a_value(): void
     {
         $instance = Weekday::parse(0);
 
@@ -42,7 +42,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_change_locale() : void
+    public function it_can_change_locale(): void
     {
         $instance = Weekday::parse(0);
 
@@ -54,7 +54,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_a_value_from_a_name() : void
+    public function it_can_retrieve_a_value_from_a_name(): void
     {
         $this->assertEquals(
             0,
@@ -63,7 +63,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_a_value_from_a_name_in_another_locale() : void
+    public function it_can_retrieve_a_value_from_a_name_in_another_locale(): void
     {
         $this->assertEquals(
             0,
@@ -72,7 +72,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_a_name_from_a_value() : void
+    public function it_can_retrieve_a_name_from_a_value(): void
     {
         $this->assertEquals(
             'Monday',
@@ -81,7 +81,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_a_name_from_a_value_in_another_locale() : void
+    public function it_can_retrieve_a_name_from_a_value_in_another_locale(): void
     {
         $this->assertEquals(
             'Lundi',
@@ -90,7 +90,7 @@ class WrapperTest extends TestCase
     }
 
     /** @test **/
-    public function it_can_retrieve_the_names_of_a_locale() : void
+    public function it_can_retrieve_the_names_of_a_locale(): void
     {
         $this->assertCount(7, $names = Weekday::names());
 
@@ -119,7 +119,7 @@ class WrapperTest extends TestCase
      * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageProviders($app) : array
+    protected function getPackageProviders($app): array
     {
         return [
             LaravelWeekdayServiceProvider::class,
