@@ -41,7 +41,7 @@ class Weekday
      *
      * @return  \ChinLeung\Weekday\Weekday
      */
-    public function getInstance() : PhpWeekday
+    public function getInstance(): PhpWeekday
     {
         return $this->instance ?? new PhpWeekday;
     }
@@ -52,7 +52,7 @@ class Weekday
      * @param  string|null  $locale
      * @return string
      */
-    private function locale(?string $locale) : string
+    private function locale(?string $locale): string
     {
         return $locale ?: app()->getLocale();
     }
@@ -64,7 +64,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public function name(int $value, string $locale = null) : string
+    public function name(int $value, string $locale = null): string
     {
         return static::parse($value, $locale)
             ->getInstance()
@@ -77,7 +77,7 @@ class Weekday
      * @param  string  $locale
      * @return \Illuminate\Support\Collection
      */
-    public function names(string $locale = null) : Collection
+    public function names(string $locale = null): Collection
     {
         return collect(PhpWeekday::getNames($this->locale($locale)));
     }
@@ -89,7 +89,7 @@ class Weekday
      * @param  string  $locale
      * @return self
      */
-    public function parse($value, string $locale = null) : self
+    public function parse($value, string $locale = null): self
     {
         return new static(
             PhpWeekday::parse($value, $this->locale($locale))
@@ -102,7 +102,7 @@ class Weekday
      * @param  string  $locale
      * @return self
      */
-    public function to(string $locale) : self
+    public function to(string $locale): self
     {
         $this->getInstance()->setLocale($locale);
 
@@ -116,7 +116,7 @@ class Weekday
      * @param  string  $locale
      * @return string
      */
-    public function value(string $name, string $locale = null) : int
+    public function value(string $name, string $locale = null): int
     {
         return static::parse($name, $locale)
             ->getInstance()
